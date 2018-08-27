@@ -1,0 +1,36 @@
+
+/* Write a code which gets the values regarding three sides of a tiangular
+and shows whether that is a right-angled triangular or not.*/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Session3_Ex5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           
+            Console.WriteLine("Please enter the value of the triangular's first side:");
+            float side1 = float.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter the value of the triangular's second side:");
+            float side2 = float.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter the value of the triangular's third side:");
+            float side3 = float.Parse(Console.ReadLine());
+            if (side1* side1 == (side2 * side2  + side3 * side3))
+                { Console.WriteLine("The triangular is Right-angled"); }
+            else if (side2 * side2 == (side1 * side1 + side3 * side3))
+                { Console.WriteLine("The triangular is Right-angled"); }
+            else if (side3 * side3 == (side1 * side1 + side2 * side2))
+                { Console.WriteLine("The triangular is Right-angled"); }   
+            else
+                { Console.WriteLine("The triangular is Not right-angled"); }
+
+            Console.ReadKey();
+        }
+    }
+}
